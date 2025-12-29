@@ -78,6 +78,86 @@ A curated collection of foundational and breakthrough papers in deep learning, c
 
 ---
 
+# Self-Supervised Learning Techniques
+
+## Core Self-Supervised Learning Methods
+
+| Paper | Authors | Year | ArXiv/Link | Key Contribution |
+|-------|---------|------|------------|------------------|
+| **DINO** (Self-Distillation with No Labels) | Caron et al. (Meta AI) | 2021 | [arxiv:2104.14294](https://arxiv.org/abs/2104.14294) | Self-distillation framework for ViTs without labels; produces explicit semantic information; 80.1% ImageNet top-1 |
+| **DINOv2** (Learning Robust Visual Features without Supervision) | Oquab et al. (Meta AI) | 2023 | [arxiv:2304.07193](https://arxiv.org/abs/2304.07193) | Foundation model for all-purpose visual features; 1B ViT parameters; surpasses OpenCLIP on multiple benchmarks |
+| **Momentum Contrast (MoCo)** | He et al. (FAIR, Facebook) | 2020 | [arxiv:1911.05722](https://arxiv.org/abs/1911.05722) | Dynamic dictionary with queue and momentum encoder; contrastive learning; outperforms supervised pre-training on 7 detection/segmentation tasks |
+| **SimCLR** (A Simple Framework for Contrastive Learning of Visual Representations) | Chen et al. (Google) | 2020 | [arxiv:2002.05709](https://arxiv.org/abs/2002.05709) | Large batch contrastive learning; simple and effective; demonstrates importance of scale and augmentation |
+| **BYOL** (Bootstrap Your Own Latent) | Grill et al. (DeepMind) | 2020 | [arxiv:2006.07733](https://arxiv.org/abs/2006.07733) | Contrastive learning without negative pairs; momentum encoder and predictor network; competitive with supervised learning |
+| **SwAV** (Unsupervised Learning of Visual Features by Contrasting Cluster Assignments) | Caron et al. (Meta AI) | 2020 | [arxiv:2006.09882](https://arxiv.org/abs/2006.09882) | Contrastive learning with online clustering; efficient on multiple GPUs; 75.3% ImageNet top-1 |
+| **VICReg** (Variance-Invariance-Covariance Regularization) | Bardes et al. (Meta AI) | 2022 | [arxiv:2205.00559](https://arxiv.org/abs/2205.00559) | Avoids collapse through explicit regularization; variance, invariance, covariance terms; robust training without momentum encoder |
+| **Barlow Twins** | Zbontar et al. (Meta AI) | 2021 | [arxiv:2103.03230](https://arxiv.org/abs/2103.03230) | Self-supervised learning by redundancy reduction; cross-correlation matrix objective; simple yet effective |
+| **NNCLR** (Nearest-Neighbor Contrastive Learning of Visual Representations) | Dwibedi et al. (Google) | 2021 | [arxiv:2104.14548](https://arxiv.org/abs/2104.14548) | Combines contrastive learning with nearest neighbors; improves convergence and downstream performance |
+| **MAE** (Masked Autoencoders Are Scalable Vision Learners) | He et al. (Meta AI) | 2021 | [arxiv:2111.06377](https://arxiv.org/abs/2111.06377) | Masked image modeling; randomly masks patches and reconstructs; simple, scalable, and effective |
+
+---
+
+## Related Self-Supervised Approaches
+
+| Paper | Authors | Year | ArXiv/Link | Key Contribution |
+|-------|---------|------|------------|------------------|
+| **Temporal Contrastive Learning** (Video SSL) | Wang et al. | 2021 | [arxiv:2008.02531](https://arxiv.org/abs/2008.02531) | Self-supervised learning from video; temporal contrast between frames |
+| **Dense Contrastive Learning** | Wang et al. (FAIR) | 2021 | [arxiv:2011.09157](https://arxiv.org/abs/2011.09157) | Pixel-level or region-level contrastive learning; applicable to dense prediction tasks |
+| **Self-Supervised Learning from Rotation** | Gidaris et al. | 2018 | [arxiv:1803.07728](https://arxiv.org/abs/1803.07728) | Predicting rotation angles as pretext task; early self-supervised learning method |
+| **Contrastive Learning with Domain Knowledge** | Khosla et al. | 2020 | [arxiv:2004.11362](https://arxiv.org/abs/2004.11362) | Supervised contrastive learning; learns from labeled data more effectively than standard supervised learning |
+
+---
+
+## Complementary Techniques and Applications
+
+### Vision Transformer Backbones for SSL
+
+| Paper | Authors | Year | ArXiv/Link | Key Contribution |
+|-------|---------|------|------------|------------------|
+| **ViT** (Vision Transformer) | Dosovitskiy et al. | 2020 | [arxiv:2010.11929](https://arxiv.org/abs/2010.11929) | Pure transformer backbone for vision; enables effective SSL with DINO and DINOv2 |
+| **Swin Transformer** | Liu et al. | 2021 | [arxiv:2103.14030](https://arxiv.org/abs/2103.14030) | Hierarchical transformer with shifted windows; efficient and effective |
+| **DeiT** (Data-efficient Image Transformers) | Touvron et al. (Facebook AI) | 2021 | [arxiv:2012.12877](https://arxiv.org/abs/2012.12877) | Training ViTs efficiently with distillation; reduces computational requirements |
+
+### Multi-Modal SSL
+
+| Paper | Authors | Year | ArXiv/Link | Key Contribution |
+|-------|---------|------|------------|------------------|
+| **CLIP** (Contrastive Language-Image Pre-training) | Radford et al. (OpenAI) | 2021 | [arxiv:2103.00020](https://arxiv.org/abs/2103.00020) | Self-supervised learning from image-text pairs; zero-shot transfer capabilities |
+| **BLIP** (Bootstrapping Language-Image Pre-training) | Li et al. | 2022 | [arxiv:2201.12086](https://arxiv.org/abs/2201.12086) | Unified vision-language model; multimodal understanding from image-text data |
+| **DreamSim** (Learning New Image Similarities from Self-Supervised Learning) | Derrick et al. | 2023 | [arxiv:2402.19277](https://arxiv.org/abs/2402.19277) | Distills SSL model similarities for efficient image similarity learning |
+
+### 3D and Point Cloud SSL
+
+| Paper | Authors | Year | ArXiv/Link | Key Contribution |
+|-------|---------|------|------------|------------------|
+| **DepthContrast** (Self-Supervised Learning from Depth and Camera Motion) | Wang et al. | 2021 | [arxiv:2104.02960](https://arxiv.org/abs/2104.02960) | SSL from monocular videos using geometric constraints (depth and motion) |
+| **DepthAnything** (Unleashing Unmanned Aerial Vehicle Potential for Single-Image Depth Estimation) | Yang et al. | 2024 | [arxiv:2401.10891](https://arxiv.org/abs/2401.10891) | SSL for monocular depth estimation; zero-shot transfer to diverse datasets |
+| **MiDaS** (Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer) | Ranftl et al. | 2020 | [arxiv:1907.01341](https://arxiv.org/abs/1907.01341) | Zero-shot depth estimation through mixing datasets and SSL techniques |
+| **PointContrast** (Self-Supervised Learning from Raw Point Clouds via Separating Mixed Shapes) | Xie et al. | 2021 | [arxiv:2101.02691](https://arxiv.org/abs/2101.02691) | Contrastive learning on 3D point clouds; geometric transforms as augmentations |
+
+---
+
+## Key SSL Concepts and Terminology
+
+### Contrastive Learning
+- **Positive Pairs**: Similar views of the same image (augmented versions)
+- **Negative Pairs**: Views from different images
+- **Objective**: Maximize similarity between positives, minimize between negatives
+
+### Non-Contrastive Methods
+- **Momentum Encoder**: Slowly updated copy of the main encoder (MoCo, BYOL)
+- **Predictor Network**: Additional projection head (BYOL, VICReg)
+- **Redundancy Reduction**: Prevents representation collapse (Barlow Twins, VICReg)
+
+### Masked Image Modeling (MIM)
+- **MAE**: Masks random patches (75%) and reconstructs from visible patches
+- **BEiT**: Tokens are quantized; masked token prediction
+- **Scalable**: Works well with large models and datasets
+
+---
+
+
+
 ## Additional Resources
 
 ### Self-Supervised Learning
@@ -242,13 +322,3 @@ QAT simulates quantization effects **during training**, allowing the model to ad
 ---
 
 ## 📚 References
-
-- FlashAttention:
-  - Tri Dao et al., *\"FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness\"*.[web:50]
-- Mixed Precision:
-  - PyTorch Distributed & Mixed Precision Training Overview.[web:57]
-- Sparse / Efficient Attention & Inference:
-  - Overviews of sparse attention models and inference-time optimizations.[web:47][web:48]
-- DeepSpeed:
-  - DeepSpeed: *Extreme-scale model training and inference library*.[web:32]
-
