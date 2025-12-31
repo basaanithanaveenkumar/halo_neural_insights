@@ -50,3 +50,48 @@ Pi0.5 builds on Pi0 with several key improvements [attached_file:1]:
 - **FAST Tokenizer (HF)**: https://huggingface.co/physical-intelligence/fast
 - **LeRobot Pi0.5**: https://github.com/huggingface/lerobot/tree/main/src/lerobot/policies/pi05
 - **Papers**: Pi0.5, FAST, Knowledge Insulation, Hi Robot, Real-Time Chunking
+
+
+# Smol VLA Model
+
+# SmolVLA Reading Materials
+
+A curated collection of resources for understanding SmolVLA, the efficient vision-language-action model for robotics.
+
+## Official Hugging Face Resources
+
+### SmolVLA: Efficient Vision-Language-Action Model
+- **URL**: https://huggingface.co/blog/smolvla
+- **Topics**: Architecture overview, SmolVLM2 backbone, flow matching transformer, training methodology
+
+### SmolVLA - LeRobot Documentation
+- **URL**: https://huggingface.co/docs/lerobot/en/smolvla
+- **Topics**: LeRobot integration, fine-tuning guides, dataset usage
+
+### SmolVLM - small yet mighty Vision Language Model
+- **URL**: https://huggingface.co/blog/smolvlm
+- **Topics**: 2B VLM backbone, multi-image processing, image token compression, inference examples
+
+### SmolVLM-Instruct Model Card
+- **URL**: https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct
+- **Topics**: Technical specifications, usage examples, fine-tuning tutorials for VLM component
+
+## Academic Paper
+
+### SmolVLA: A vision-language-action model for affordable and efficient robotics
+- **URL**: https://arxiv.org/html/2506.01844v1
+- **Topics**: Complete technical details, attention mechanisms (CA+SA), flow matching objectives, ablation studies
+
+## Community Analysis
+
+### Decoding SmolVLA - Phospho.ai
+- **URL**: https://blog.phospho.ai/decoding-smolvla-a-vision-language-action-model-for-efficient-and-accessible-robotics/
+- **Topics**: Enhanced attention mechanisms, training methodologies, flow matching vs regression comparison
+
+### SmolVLA Literature Review - Themoonlight.io
+- **URL**: https://www.themoonlight.io/en/review/smolvla-a-vision-language-action-model-for-affordable-and-efficient-robotics
+- **Topics**: Mathematical formulations, architectural deep dive, asynchronous inference, deployment strategies
+
+## Quick Start
+
+For implementation details, start with the [official blog post](https://huggingface.co/blog/smolvla) and [LeRobot documentation](https://huggingface.co/docs/lerobot/en/smolvla). For deep technical understanding, refer to the [arXiv paper](https://arxiv.org/html/2506.01844v1).
