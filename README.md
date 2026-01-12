@@ -137,6 +137,21 @@ A curated collection of foundational and breakthrough papers in deep learning, c
 
 ---
 
+
+### JEPA Series (Joint Embedding Predictive Architecture)
+
+| Paper | Authors | Year | ArXiv/Link | Key Contribution |
+|-------|---------|------|------------|------------------|
+| **I-JEPA** (Image Joint-Embedding Predictive Architecture) | Assran et al. (Meta AI) | 2023 | [arxiv:2301.08243](https://arxiv.org/abs/2301.08243) | Self-supervised learning by predicting representations of masked image regions in latent space |
+| **A-JEPA** (Audio Joint-Embedding Predictive Architecture) | Fei, Fan, Huang | 2023 | [arxiv:2311.15830](https://arxiv.org/abs/2311.15830) | Extension of JEPA to audio spectrograms with curriculum masking |
+| **V-JEPA** (Video Joint-Embedding Predictive Architecture) | Bardes, Garrido, Ponce, Chen, Rabbat, LeCun, Assran, Ballas (Meta AI) | 2024 | [Meta AI Blog](https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/) | Non-generative video understanding via abstract representation prediction |
+| **V-JEPA 2** | Meta AI | 2025 | [arxiv:2506.09985](https://arxiv.org/abs/2506.09985) | Scaled video model with world modeling and robotic planning capabilities |
+| **VL-JEPA** (Vision-Language JEPA) | Chen et al. | 2025 | [arxiv:2512.10942](https://arxiv.org/abs/2512.10942) | Vision-language model with selective decoding and 50% fewer parameters |
+
+
+
+
+
 ## Key SSL Concepts and Terminology
 
 ### Contrastive Learning
