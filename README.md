@@ -3,6 +3,18 @@
 ## Overview
 A comprehensive knowledge repository for deep learning insights, neural network architectures, and AI research learnings. This project serves as a personal reference hub for documenting neural architecture innovations, experimental findings, and practical implementation insights across computer vision, autonomous driving perception, and foundation models.
 
+## Survey, docs and the Hale/Halo ecosystem
+
+| | |
+|---|---|
+| Survey paper | [`paper/main.tex`](paper/main.tex): *From Self-Supervised Perception to Vision–Language–Action Models* (`make -C paper`) |
+| Ecosystem hub page | [basaanithanaveenkumar.github.io/halo_neural_insights](https://basaanithanaveenkumar.github.io/halo_neural_insights/) ([source](project-page/index.html)) |
+| Reading map | [`docs/reading-map.md`](docs/reading-map.md) (Mermaid) |
+| Ecosystem overview | [`docs/ecosystem.md`](docs/ecosystem.md): how the nine repositories fit together |
+| Errata | [`docs/errata.md`](docs/errata.md): citation fixes these notes need |
+| Blog | [From pixels to robot actions: a tour of the Hale/Halo ecosystem](docs/blog/2026-09-28-ecosystem-tour.md) |
+| Claude Code skills | [`.claude/skills/`](.claude/skills): `insights-add-paper`, `insights-topic-notes`, `hale-publish` |
+
 ## Purpose
 To maintain a structured collection of:
 - Neural network architecture analysis and breakdowns

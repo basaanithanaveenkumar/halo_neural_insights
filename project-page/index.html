@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halo Neural Insights</title>
+<meta name="description" content="A practitioner&#x27;s map from perception to robot actions, and the hub for the nine Hale/Halo repositories.">
+<meta property="og:title" content="Halo Neural Insights: From Self-Supervised Perception to Vision–Language–Action Models">
+<meta property="og:description" content="A practitioner&#x27;s map from perception to robot actions, and the hub for the nine Hale/Halo repositories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5b5b63;--card:#ffffff;--line:#e4e2dc;--accent:#2f5bd3;--accent-soft:#e8eefc;--code:#f3f2ee;--chip:#efeee9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111214;--fg:#ececee;--muted:#a0a0aa;--card:#1a1b1f;--line:#2c2d33;--accent:#8aa8ff;--accent-soft:#1e2640;--code:#1f2025;--chip:#24252b}}
+:root[data-theme="dark"]{--bg:#111214;--fg:#ececee;--muted:#a0a0aa;--card:#1a1b1f;--line:#2c2d33;--accent:#8aa8ff;--accent-soft:#1e2640;--code:#1f2025;--chip:#24252b}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 "Source Serif 4",Georgia,serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+header.hero{padding:64px 0 28px;text-align:center}
+.kicker{font:600 13px/1 Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(30px,5.4vw,48px)/1.15 Inter,system-ui,sans-serif;margin:14px 0 10px;letter-spacing:-.02em}
+.subtitle{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:720px;margin:0 auto}
+.authors{margin:20px 0 4px;font:500 16px Inter,system-ui,sans-serif}
+.affil{color:var(--muted);font:14px Inter,system-ui,sans-serif}
+.buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--fg);color:var(--bg);text-decoration:none;font:600 14px Inter,system-ui,sans-serif}
+.btn.alt{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn:hover{opacity:.88}
+section{padding:26px 0;border-top:1px solid var(--line)}
+h2{font:700 24px/1.3 Inter,system-ui,sans-serif;margin:0 0 14px;letter-spacing:-.01em}
+h3{font:650 17px/1.35 Inter,system-ui,sans-serif;margin:0 0 6px}
+p{margin:0 0 12px}
+.tldr{background:var(--accent-soft);border-radius:14px;padding:18px 20px;font-size:18px}
+.tldr b{font-family:Inter,system-ui,sans-serif}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card p{font-size:15.5px;color:var(--muted);margin:0}
+figure{margin:0 0 18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;overflow-x:auto}
+figcaption{font:14px/1.5 Inter,system-ui,sans-serif;color:var(--muted);margin-top:10px}
+.mermaid{display:flex;justify-content:center;min-width:0}
+.mermaid svg{max-width:100%;height:auto}
+pre{background:var(--code);border:1px solid var(--line);border-radius:12px;padding:14px 16px;overflow-x:auto;font:13.5px/1.55 "JetBrains Mono",ui-monospace,monospace;margin:0 0 12px}
+code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.9em}
+table{width:100%;border-collapse:collapse;font:15px/1.5 Inter,system-ui,sans-serif}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td code{background:var(--chip);padding:1px 6px;border-radius:6px}
+.tablewrap{overflow-x:auto}
+.note{font:14px/1.55 Inter,system-ui,sans-serif;color:var(--muted)}
+footer{padding:32px 0 48px;color:var(--muted);font:14px Inter,system-ui,sans-serif;text-align:center;border-top:1px solid var(--line)}
+a{color:var(--accent)}
+.theme{position:fixed;top:12px;right:12px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:6px 12px;font:13px Inter,system-ui,sans-serif;cursor:pointer}
+</style>
+</head>
+<body>
+<button class="theme" id="theme" aria-label="Toggle dark mode">Theme</button>
+<div class="wrap">
+<header class="hero">
+  <div class="kicker">Survey · Knowledge base · Ecosystem hub</div>
+  <h1>Halo Neural Insights: From Self-Supervised Perception to Vision–Language–Action Models</h1>
+  <p class="subtitle">A practitioner's map of the ideas behind embodied foundation models, from ViTs and self-supervision through VLMs and VLAs to MoE and efficiency, linked to open implementations in eight Hale/Halo code repositories.</p>
+  <div class="authors">B A NaveenKumar</div>
+  <div class="affil">Independent research · 2026</div>
+  <div class="buttons"><a class="btn" href="paper.pdf">Survey (PDF)</a><a class="btn alt" href="https://github.com/basaanithanaveenkumar/halo_neural_insights">Notes</a><a class="btn alt" href="https://github.com/basaanithanaveenkumar/halo_neural_insights/tree/main/docs">Docs</a><a class="btn alt" href="https://github.com/basaanithanaveenkumar/halo_neural_insights/blob/main/docs/blog/2026-09-28-ecosystem-tour.md">Blog</a></div>
+</header>
+<section><div class="tldr"><b>TL;DR.</b> One chain: architectures → self-supervision → VLMs → VLAs, with MoE and efficiency feeding in. Each link points to working code: Hale-VLA, HALE-WAM, Hale-VLM, Halo-VLM, Hale-LLM, Hale-Token, HaleBlocks and HaloBlocks.</div></section>
+<section><h2>Abstract</h2><p>Building an embodied foundation model touches a long chain of ideas: transformer backbones, self-supervised visual pre-training, vision–language alignment, sparse mixture-of-experts scaling, action representations for robot control, and the systems techniques that make any of it trainable and deployable.</p><p>This survey organises that chain as one practitioner's map, distilled from the Halo Neural Insights knowledge base, and links each stage to an open reference implementation. It groups self-supervised methods by how they avoid collapse, makes the VLA design choices in π0.5 and SmolVLA explicit (FAST tokens vs flow-matching experts, knowledge insulation, System 1/2, real-time chunking), and ends with open questions the ecosystem is set up to answer. It reports no new experiments.</p></section>
+<section><h2>Highlights</h2><div class="grid"><div class="card"><h3>Perception</h3><p>ViT, DeiT, Swin, ResNet, ConvNeXt; DETR and Deformable DETR; BEVDet and BEVFormer; homographies and RANSAC.</p></div><div class="card"><h3>Self-supervision</h3><p>Contrastive, distillation, redundancy reduction, masked modelling and JEPA, organised by anti-collapse mechanism.</p></div><div class="card"><h3>VLMs → VLAs</h3><p>CLIP/SigLIP → LLaVA-style projection → RT-2, OpenVLA, π0, π0.5, SmolVLA and EO-1.</p></div><div class="card"><h3>π0.5 design space</h3><p>FAST (DCT + BPE) vs flow matching, knowledge insulation, System 1/System 2, real-time chunking.</p></div><div class="card"><h3>MoE</h3><p>Sparse gating → Switch → Mixtral → DeepSeekMoE shared experts → DeepSeek-V3.</p></div><div class="card"><h3>Efficiency</h3><p>FlashAttention, mixed precision, ZeRO, pipeline parallelism, pruning, PTQ and QAT.</p></div></div></section>
+<section><h2>Architecture</h2><figure><div class="mermaid">flowchart TB
+  NI[&quot;halo_neural_insights&lt;br/&gt;notes · reading map · survey&quot;]
+  subgraph Libraries
+    HB[&quot;HaleBlocks (hale_core)&lt;br/&gt;components · configs · registries · trainer · data&quot;]
+    HOB[&quot;HaloBlocks (pip: haloblocks)&lt;br/&gt;37 composable blocks&quot;]
+  end
+  subgraph Language
+    LLM[&quot;Hale-LLM&lt;br/&gt;AR · masked / block diffusion · flow matching&quot;]
+    TOK[&quot;Hale-Token (Rust)&lt;br/&gt;MoE inference on Apple Silicon&quot;]
+  end
+  subgraph Vision-language
+    HVLM[&quot;Hale-VLM&lt;br/&gt;SigLIP + LoRA on Qwen3-8B / R1-7B&quot;]
+    OVLM[&quot;Halo-VLM&lt;br/&gt;Hale + scratch ViT-MoE + CLIP baseline&quot;]
+  end
+  subgraph Embodied
+    VLA[&quot;Hale-VLA&lt;br/&gt;ViT + MoE decoder + action head&quot;]
+    WAM[&quot;HALE-WAM&lt;br/&gt;VLA + flow actions + DiT world model&quot;]
+  end
+  HB --&gt;|plugin package| HVLM
+  HB -. &quot;same component design (vendored core)&quot; .-&gt; LLM
+  HB -. &quot;vendored core&quot; .-&gt; OVLM
+  VLA --&gt;|extends| WAM
+  HVLM --&gt;|superset| OVLM
+  HOB -. &quot;shared blocks: DeepSeek MoE, flow decoder&quot; .-&gt; VLA
+  HOB -.-&gt; WAM
+  NI -. &quot;research notes behind&quot; .-&gt; VLA
+  NI -.-&gt; TOK</div><figcaption><b>Figure 1.</b> The Hale/Halo ecosystem.</figcaption></figure><figure><div class="mermaid">flowchart LR
+  OBS[&quot;images + instruction + state&quot;] --&gt; VLM[&quot;VLM backbone&lt;br/&gt;(π0.5: SigLIP + Gemma; SmolVLA: SmolVLM2)&quot;]
+  VLM --&gt; S2[&quot;System 2 (≈1 Hz):&lt;br/&gt;decompose task into subtasks&quot;]
+  S2 --&gt; VLM
+  VLM --&gt; FAST[&quot;FAST tokens&lt;br/&gt;DCT + BPE of action chunks&lt;br/&gt;(fast to train, autoregressive decode)&quot;]
+  VLM --&gt; FLOW[&quot;flow-matching action expert&lt;br/&gt;(continuous chunks, fast decode)&quot;]
+  KI[&quot;knowledge insulation:&lt;br/&gt;stop gradients from action expert into VLM&quot;] -.-&gt; FLOW
+  FLOW --&gt; RTC[&quot;real-time chunking:&lt;br/&gt;inpaint the next chunk while the current one executes&quot;]
+  RTC --&gt; ROBOT[&quot;robot at ≈50 Hz&quot;]</div><figcaption><b>Figure 2.</b> VLA design space from the π0.5 and SmolVLA notes.</figcaption></figure><figure><div class="mermaid">flowchart TB
+  SSL[&quot;Self-supervised representation learning&quot;] --&gt; C[&quot;Contrastive&lt;br/&gt;positives vs negatives&quot;]
+  SSL --&gt; NC[&quot;Non-contrastive&lt;br/&gt;no negatives&quot;]
+  SSL --&gt; MIM[&quot;Masked modeling&lt;br/&gt;reconstruct inputs&quot;]
+  SSL --&gt; JEPA[&quot;Joint-embedding predictive&lt;br/&gt;predict latents&quot;]
+  C --&gt; C1[&quot;MoCo: queue + momentum encoder&quot;]
+  C --&gt; C2[&quot;SimCLR: large batch + augmentation&quot;]
+  NC --&gt; N1[&quot;BYOL: predictor + momentum target&quot;]
+  NC --&gt; N2[&quot;Barlow Twins / VICReg:&lt;br/&gt;decorrelate / variance terms&quot;]
+  NC --&gt; N3[&quot;DINO / DINOv2: self-distillation,&lt;br/&gt;centering + sharpening&quot;]
+  MIM --&gt; M1[&quot;MAE: mask 75% of patches, reconstruct pixels&quot;]
+  JEPA --&gt; J1[&quot;I-JEPA (images) → V-JEPA (video) → V-JEPA 2 (world model + planning)&quot;]</div><figcaption><b>Figure 3.</b> Self-supervised families and how they avoid collapse.</figcaption></figure><figure><div class="mermaid">flowchart TB
+  subgraph Train
+    FA[&quot;FlashAttention&lt;br/&gt;IO-aware exact attention&quot;]
+    MP[&quot;mixed precision&lt;br/&gt;bf16/fp16 + fp32 master weights&quot;]
+    Z[&quot;DeepSpeed ZeRO&lt;br/&gt;shard optimizer / grads / params&quot;]
+    PP[&quot;pipeline parallelism&lt;br/&gt;(PiPPy → torch.distributed.pipelining)&quot;]
+  end
+  subgraph Deploy
+    PR[&quot;pruning&lt;br/&gt;structured for real speed-ups&quot;]
+    PTQ[&quot;post-training quantization&lt;br/&gt;(static / dynamic)&quot;]
+    QAT[&quot;quantization-aware training&lt;br/&gt;for INT4 and below&quot;]
+  end
+  Train --&gt; CKPT[&quot;checkpoint&quot;] --&gt; Deploy</div><figcaption><b>Figure 4.</b> Efficiency stack for training and deployment.</figcaption></figure></section>
+
+<section><h2>The repositories</h2><div class="grid"><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/Hale-VLA/">Hale-VLA</a></h3><p>From-scratch VLA: ViT + MoE decoder with &lt;image&gt;/&lt;state&gt;/&lt;action&gt; tokens. 355.9M params. <a href="https://github.com/basaanithanaveenkumar/Hale-VLA">code</a></p></div><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/HALE-WAM/">HALE-WAM</a></h3><p>World-action model: VLA + flow-matching actions + DiT future-frame prediction. 176.3M params. <a href="https://github.com/basaanithanaveenkumar/HALE-WAM">code</a></p></div><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/Hale-VLM/">Hale-VLM</a></h3><p>SigLIP + MLP + LoRA on Qwen3-8B / R1-Distill-7B, with SmolVLM/SmolVLA data registries. <a href="https://github.com/basaanithanaveenkumar/Hale-VLM">code</a></p></div><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/Halo-VLM/">Halo-VLM</a></h3><p>Three VLM paths in one library: LoRA on 8B LLMs, a from-scratch ViT-MoE model and a CLIP baseline. <a href="https://github.com/basaanithanaveenkumar/Halo-VLM">code</a></p></div><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/HaleBlocks/">HaleBlocks</a></h3><p>Shared components, strict configs, registries, trainer and SmolLM2/VLM data. 114 tests. <a href="https://github.com/basaanithanaveenkumar/HaleBlocks">code</a></p></div><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/HaloBlocks/">HaloBlocks</a></h3><p>pip-installable composable blocks: 24 attention blocks, MoE and a builder. 71 tests. <a href="https://github.com/basaanithanaveenkumar/HaloBlocks">code</a></p></div><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/Hale-LLM/">Hale-LLM</a></h3><p>AR vs masked diffusion vs block diffusion vs flow matching on one backbone. <a href="https://github.com/basaanithanaveenkumar/Hale-LLM">code</a></p></div><div class="card"><h3><a href="https://basaanithanaveenkumar.github.io/Hale-Token/">Hale-Token</a></h3><p>Rust MoE inference on Apple Silicon: experts tiered across unified memory and SSD. <a href="https://github.com/basaanithanaveenkumar/Hale-Token">code</a></p></div></div><p class="note">Each repository has an arXiv-style paper, a GitHub Pages project page, Mermaid architecture diagrams, a blog post and Claude Code skills.</p></section>
+<section><h2>Quick start</h2><pre><code>git clone https://github.com/basaanithanaveenkumar/halo_neural_insights
+make -C halo_neural_insights/paper      # build the survey PDF (needs a LaTeX install)</code></pre></section>
+<section><h2>Citation</h2><pre><code>@misc{naveenkumar2026haloinsights,
+  title  = {From Self-Supervised Perception to Vision--Language--Action Models:
+            A Practitioner&#x27;s Map and an Open Ecosystem of Reference Implementations},
+  author = {NaveenKumar, B A},
+  year   = {2026},
+  url    = {https://github.com/basaanithanaveenkumar/halo_neural_insights}
+}</code></pre></section>
+</div>
+<footer>Halo Neural Insights · <a href="https://github.com/basaanithanaveenkumar/halo_neural_insights">Source on GitHub</a></footer>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const root = document.documentElement;
+const saved = (() => { try { return localStorage.getItem('theme'); } catch (e) { return null; } })();
+if (saved) root.dataset.theme = saved;
+const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark'
+  : matchMedia('(prefers-color-scheme: dark)').matches;
+const sources = [...document.querySelectorAll('.mermaid')].map(el => el.textContent);
+async function render() {
+  mermaid.initialize({ startOnLoad: false, theme: isDark() ? 'dark' : 'neutral', securityLevel: 'strict',
+    flowchart: { curve: 'basis', htmlLabels: true } });
+  const els = document.querySelectorAll('.mermaid');
+  els.forEach((el, i) => { el.removeAttribute('data-processed'); el.textContent = sources[i]; });
+  await mermaid.run({ nodes: els });
+}
+document.getElementById('theme').addEventListener('click', () => {
+  root.dataset.theme = isDark() ? 'light' : 'dark';
+  try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  render();
+});
+render();
+</script>
+</body>
+</html>
